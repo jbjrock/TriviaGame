@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF 8">
+    <title>Trivia Game</title>
+    <!--BOOTSTRAP-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+        integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <!--CSS LINK-->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+    <div id="triviaContainer" class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title">
+                    <h1> Sports Trivia</h1>
+                </div>
+                <br>
+                <div>
+                    <h3 id="timer">TIMER</h3>
+                </div>
+                <br>
+                <h3 id="trivia-question">Questions</h3>
+                <div id="answersDisplay">
+                    <ul>
+                        <li id="answer0" data-value="0" class="list-group-item">TH</li>
+                        <li id="answer1" data-value="1" class="list-group-item">GH</li>
+                        <li id="answer2" data-value="2" class="list-group-item">TH</li>
+                        <li id="answer3" data-value="3" class="list-group-item">KH</li>
+                    </ul>
+                </div>
+            </div>
+           
+        </div>
+        <!--TITLE DIV CLOSE-->
+        <div id="results" class="container results" style="display:none;"></div>
+       
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <script src="/assets/javascript/app.js" ></script>
+</body>
+</html>
