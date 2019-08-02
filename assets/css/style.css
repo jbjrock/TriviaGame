@@ -1,7 +1,6 @@
 body {
-    background-image: url("../images/philly.jpg");
-background-color: black;
-  
+
+    background-color: black;
 }
 
 #background-size {
@@ -23,22 +22,20 @@ background-color: black;
 .title {
 
     text-align: center;
-    background-color:black;
-    color: white;
+    background-color: white;
     font-size: 25px;
     border-radius: 15px;
     padding: 25px;
-    border-color: black;
+    border-color: red;
     margin: 14px;
     border-width: 75px;
-    border-top-color:white;
+    border-top-color: orange;
 }
 
 
 #timer {
     font-weight: normal;
-    background-color: black;
-    color: white;
+    background-color: #99ff66;
     height: 30px;
     width: 300px;
     margin: 0 auto;
@@ -47,11 +44,11 @@ background-color: black;
 
 #answersDisplay {
     text-align: center;
-    background-color: black;
+    background-color: white;
     font-size: 25px;
     border-radius: 15px;
     padding: 25px;
-    border-color:gray;
+    border-color: red;
     margin: 14px;
 
 
@@ -59,9 +56,12 @@ background-color: black;
 
 #answer0 {
 
-    background-color: gray;
+    background-color: #66ccff;
     text-indent: 50%;
     border-width: 30px;
+
+
+
 
 
 
@@ -69,7 +69,7 @@ background-color: black;
 
 #answer1 {
 
-    background-color:gray;
+    background-color: #66ccff;
     text-indent: 50%;
     border-width: 30px;
 
@@ -78,7 +78,7 @@ background-color: black;
 
 #answer2 {
 
-    background-color:gray;
+    background-color: #66ccff;
     text-indent: 50%;
     border-width: 30px;
 
@@ -87,7 +87,7 @@ background-color: black;
 
 #answer3 {
 
-    background-color: gray;
+    background-color: #66ccff;
     text-indent: 50%;
     border-width: 30px;
 
@@ -96,11 +96,10 @@ background-color: black;
 
 #trivia-question {
     text-align: center;
-    background-color: black;
-    color: white;
+    background-color: white;
     font-size: 20px;
     border-radius: 15px;
     padding: 25px;
-    border-color: gray;
+    border-color: red;
     margin: 14px;
 }

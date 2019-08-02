@@ -1,6 +1,6 @@
 "use strict";
 
-//Variables
+//JAVASCRIPT VARIABLES
 var questions = [];
 var correctAnswer = "";
 var answerText = "";
@@ -20,38 +20,38 @@ $(document).ready(function () {
     var questions = [];
 
     questions[0] = {
-        questions: "How many NBA Championships does Kobe Bryant Have?",
-        options: ["5", "1", "0", "4"],
-        aAnswer: 0,
-        
+        questions: "What jersey number did Lebron James wear in Miami?",
+        options: ["5", "23", "8", "6"],
+        aAnswer: 3,
+        image: "lebron.gif",
     };
 
     questions[1] = {
-        questions: "What jersey number did Ray Lewis wear his collegiate and NFL career?",
-        options: ["40", "58", "52", "45"],
-        aAnswer: 2,
-        image: "",
+        questions: "How many Super Bowls does Tom Brady have?",
+        options: ["1", "6", "3", "10"],
+        aAnswer: 1,
+        image: "brady.gif",
     };
 
     questions[2] = {
-        questions: "What high school did Lebron James attend?",
-        options: ["Lower Merion", "Charlotte Catholic", "IMG Academy", "Saint Vincent Saint Mary's"],
+        questions: "What high school did Kobe Bryant attend?",
+        options: ["Anson High", "Dudley High", "East Texas High", "Lower Merion High"],
         aAnswer: 3,
-        
+        image: "kobe.gif",
     };
 
     questions[3] = {
-        questions: "Which NFL team is best known for it's nickname The Steel Curtain?",
-        options: ["Steelers", "Cowboys", "Eagles", "Raiders"],
+        questions: "Where did Michael Jordan attend college?",
+        options: ["UNC-Chapel Hill", "Duke", "Wake Forest", "Yale"],
         aAnswer: 0,
-        
+        image: "jordan.gif",
     };
 
     questions[4] = {
-        questions: "What baseball team did David Ortiz better known as Big Papi play for?",
-        options: ["White Sox", "Yankees", "Red Sox", "Rockies"],
+        questions: "What MLB team did Big Papi Play for?",
+        options: ["Cubs", "Yankees", "Red Sox", "Marlins"],
         aAnswer: 2,
-        
+        image: "ortiz.gif",
     };
 
 
@@ -99,7 +99,10 @@ $(document).ready(function () {
         correctAnswer = questions[i].aAnswer;
         answerText = questions[i].options[correctAnswer];
 
-       
+        //*** Clears the background of all of the answers (the stylesheet takes over again)
+        $(".list-group-item").css({
+            'background-color': ''
+        });
 
         $("#trivia-question").html(questions[i].questions);
         $("#answer0").html(questions[i].options[0]);
@@ -115,7 +118,12 @@ $(document).ready(function () {
     // If last question, call results function (showResults()).
     function showAnswer() {
 
-    
+        // show if they answered correctly or not and show image
+
+        //*** Sets the correct answer's background to bright green
+        $("#answer" + correctAnswer).css({
+            'background-color': '#00ff00'
+        });
 
         //*** Wait 3 seconds (3000 milliseconds) before moving to the next question
         setTimeout(function () {
@@ -134,7 +142,7 @@ $(document).ready(function () {
         //*** I added "data-value" in the HTML. Need to parseInt to compare
         clickAnswer = parseInt($(this).attr("data-value"));
 
-        if (clickAnswer === correctAnswer) { 
+        if (clickAnswer === correctAnswer) { //*** Use === instead of == (== can cause problems sometimes)
             $("#trivia-question").html("Correct Answer")
             qCorrect++;
         } else {
